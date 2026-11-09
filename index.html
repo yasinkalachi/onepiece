@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one piece</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .back{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgb(25, 20, 65), rgb(45, 30, 100));
+            justify-content: space-between;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            gap: 60px;
+            padding: 40px 20px;
+            flex-direction: column;
+        }
+        .badane{
+            width: 35%;
+            height: 85vh;
+            background: linear-gradient(150deg, rgb(20, 15, 55), rgb(48, 35, 105));
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 0 30px rgb(35, 85, 150, 0.50);
+            transition: 1s;
+            top: -30px;
+        }
+        .aks{
+            width: 40%;
+            height: 32%;
+            border-radius: 100px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            box-shadow: 0 0 30px rgb(35, 85, 150, 0.50);
+            transition: 1s;
+        }
+        .text{
+            width: 150px;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            padding: 0;
+            margin: 0;
+            right: 70px;
+            font-size: 70px;
+            color: white;
+        }
+        .card{
+            width: 40%;
+            height: 12%;
+            background: linear-gradient(80deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            right: 15px;
+            top: 300px;
+            text-align: center;
+            direction: rtl;
+            font-size: 30px;
+            color: rgb(240, 235, 255);
+        }
+        .card2{
+            width: 40%;
+            height: 12%;
+            background: linear-gradient(80deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 15px;
+            top: 300px;
+            text-align: center;
+            direction: rtl;
+            font-size: 30px;
+            color: rgb(240, 235, 255);
+        }
+        .card3{
+            width: 40%;
+            height: 12%;
+            background: linear-gradient(80deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            right: 15px;
+            top: 390px;
+            text-align: center;
+            direction: rtl;
+            font-size: 30px;
+            color: rgb(240, 235, 255);
+        }
+        .card4{
+            width: 40%;
+            height: 12%;
+            background: linear-gradient(80deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 15px;
+            top: 390px;
+            text-align: center;
+            direction: rtl;
+            font-size: 30px;
+            color: rgb(240, 235, 255);
+        }
+        .card5{
+            width: 40%;
+            height: 12%;
+            background: linear-gradient(80deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 15px;
+            top: 480px;
+            text-align: center;
+            direction: rtl;
+            font-size: 30px;
+            color: rgb(240, 235, 255);
+        }
+        .card6{
+            width: 40%;
+            height: 12%;
+            background: linear-gradient(80deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            right: 15px;
+            top: 480px;
+            text-align: center;
+            direction: rtl;
+            font-size: 25px;
+            color: rgb(240, 235, 255);
+        }
+        @media (max-width: 600px) {
+    .back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 15px;
+        height: auto;
+    }
+    .badane, .tozi, .dastan, .sha {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+    .badane {
+        order: 1;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        min-height: auto;
+    }
+
+.tozi {
+        order: 2;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 1.6;
+        box-sizing: border-box;
+    }
+
+    .dastan {
+        order: 3;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 1.8;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .sha {
+        order: 4;
+        padding: 15px;
+        font-size: 16px;
+        display: block !important;
+        overflow-y: visible;
+        position: static !important;
+    }
+    .aks {
+        position: static;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        order: 1;
+    }
+
+    .text {
+        position: static;
+        font-size: 35px;
+        width: auto;
+        height: auto;
+        text-align: center;
+        order: 2;
+        margin-bottom: 5px;
+    }
+
+    .card, .card2, .card3, .card4, .card5, .card6 {
+        position: static;
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        font-size: 18px;
+        padding: 10px;
+        order: 3;
+    }
+    .lu, .zoro, .nami, .usop, .sanji, .choper, .robin, .franki, .jinbe, .brook {
+        position: static !important;
+        display: inline-block !important;
+        width: 90px !important;
+        height: 90px !important;
+        margin: 4px !important;
+        bottom: auto !important;
+        left: auto !important;
+    }
+    .ticker{
+        width: 100%;
+        padding: 8px 0;
+        margin-bottom: 5px;
+        border-radius: 8px;
+        order: 0;
+    }
+    .ttext {
+        animation: moveTextMobile 12s linear infinite !important;
+    }
+    @keyframes moveTextMobile {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+        .sha2 {
+        order: 10 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        position: static !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* اول عکس داخل sha2 قرار بگیرد */
+    .sha2 .dast {
+        order: 1 !important;
+        float: none !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        object-fit: cover !important;
+        border-radius: 20px !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    .sha2 .ff {
+        order: 2 !important;
+        float: none !important;
+        width: 100% !important;
+        font-size: 20px !important;
+        line-height: 1.8 !important;
+        direction: rtl !important;
+        text-align: right !important;
+    }
+
+}
+        html {
+            min-height: 100%;
+            background: rgb(45, 30, 100);
+            scroll-behavior: smooth;
+        }
+        body {
+            min-height: 100vh;
+            background: rgb(45, 30, 100);
+        }
+        .aks:hover{
+            box-shadow: 0 0 30px rgb(35, 85, 150);
+            transform: scale(1.02);
+        }
+        .card, .card2, .card3, .card4, .card5, .card6{
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.5s;
+        }
+        .card:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover{
+            box-shadow: 0 0 20px rgb(35, 85, 150);
+            transform: scale(1.03);
+        }
+        .tozi{
+            width: 25%;
+            height: 85vh;
+            background: linear-gradient(150deg, rgb(20, 15, 55), rgb(48, 35, 105));
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            margin: 0;
+            padding: 20px;
+            border-radius: 20px;
+            position: absolute;
+            box-shadow: 0 0 30px rgb(35, 85, 150, 0.50);
+            right: 20px;
+            font-size: 23px;
+            direction: rtl;
+            text-align: right;
+            color: white;
+            top: 120px;
+        }
+        .dastan{
+            width: 25%;
+            height: 85vh;
+            background: linear-gradient(150deg, rgb(20, 15, 55), rgb(48, 35, 105));
+            margin: 0;
+            padding: 20px;
+            border-radius: 20px;
+            position: absolute;
+            box-shadow: 0 0 30px rgb(35, 85, 150, 0.50);
+            left: 20px;
+            top: 18.7%;
+            transform: translateY(-50%);
+            font-size: 19.7px;
+            direction: rtl;
+            text-align: right;
+            color: white;
+            display: block;
+            overflow-y: auto;
+        }
+        .sha{
+            width: 95%;
+            height: 95vh;
+            background: linear-gradient(150deg, rgb(20, 15, 55), rgb(48, 35, 105));
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgb(35, 85, 150, 0.50);
+            font-size: 19.7px;
+            direction: rtl;
+            text-align: right;
+            color: white;
+            position: relative;
+        }
+        .lu{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 60px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .zoro{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 290px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .nami{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 520px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .usop{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 60px;
+            cursor: pointer;
+            bottom: 277px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .sanji{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 290px;
+            cursor: pointer;
+            bottom: 277px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .choper{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 520px;
+            cursor: pointer;
+            bottom: 277px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .robin{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 60px;
+            cursor: pointer;
+            bottom: 50px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .franki{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 290px;
+            cursor: pointer;
+            bottom: 50px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .jinbe{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 520px;
+            cursor: pointer;
+            bottom: 50px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .brook{
+            width: 17%;
+            height: 23%;
+            border-radius: 20px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 750px;
+            cursor: pointer;
+            bottom: 277px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            transition: 0.8s;
+        }
+        .lu:hover,
+        .zoro:hover,
+        .nami:hover, 
+        .usop:hover, 
+        .sanji:hover, 
+        .choper:hover, 
+        .brook:hover,
+        .robin:hover,
+        .franki:hover,
+        .jinbe:hover{
+            box-shadow: 0 0 30px rgb(35, 85, 180);
+            transform: scale(1.8);
+            z-index: 10;
+        }
+        .ticker{
+            width: 100%;
+            background: linear-gradient(90deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            padding: 10px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 999;
+        }
+        .ttext{
+            display: inline-block;
+            white-space: nowrap;
+            color: rgb(240, 235, 255);
+            font-size: 18px;
+            font-weight: bold;
+            direction: rtl;
+            animation: moveText 15s linear infinite;
+        }
+        @keyframes moveText{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        .top{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, rgb(65, 35, 145), rgb(35, 85, 150));
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(35, 85, 150, 0.5);
+            z-index: 999;
+            transition: all 0.4s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .top:hover{
+            transform: translateY(-5px);
+            box-sizing: 0 6px 20px rgb(35, 85, 180);
+        }
+        .top.show{
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .sha2{
+            width: 95%;
+            height: 95vh;
+            background: linear-gradient(150deg, rgb(20, 15, 55), rgb(48, 35, 105));
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgb(35, 85, 150, 0.50);
+            position: relative;
+        }
+        .dast{
+            width: 30%;
+            height: 88vh;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgb(35, 85, 150);
+            display: block;
+        }
+
+        .ff{
+            direction: rtl;
+            text-align: right;
+            font-size: 20px;
+            width: 70%;
+            float: right;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="#" class="top" title="برگشت به بالا">⬆</a>
+        <div class="ticker">
+            <div class="ttext">
+                🏴‍☠️ به دنیای وان‌پیس خوش آمدید! | آخرین بروزرسانی: قسمت ۱۱۸۰ | لوفی کلاه حصیری و گروهش 🏴‍☠️
+            </div>
+        </div>
+        <div class="tozi">
+            وان پیس (به ژاپنی: ワンピース؛ به انگلیسی: One Piece) یک مجموعهٔ مانگای ژاپنی در ژانر ماجراجویی و خیال‌پردازی است که توسط ایچیرو اودا نوشته و تصویرگری شده است. این مجموعه از ۲۲ ژوئیهٔ ۱۹۹۷ در مجلهٔ هفته‌نامه شونن جامپ متعلق به انتشارات شوئیشا منتشر می‌شود. داستان دربارهٔ ماجراجویی‌های مانکی دی. لوفی و گروه دزدان دریایی کلاه حصیری در جست‌وجوی گنج افسانه‌ای وان پیس است؛ گنجی که یافتن آن می‌تواند لوفی را به پادشاه دزدان دریایی تبدیل کند.
+
+            وان پیس به یکی از موفق‌ترین مجموعه‌های مانگای تاریخ تبدیل شده و علاوه بر مانگا، اقتباس‌های متعددی از جمله مجموعهٔ تلویزیونی انیمه، فیلم‌های پویانمایی، بازی‌های ویدئویی و یک مجموعهٔ تلویزیونی با بازیگران واقعی داشته است. این مجموعه در مارس ۲۰۲۶ از مرز ۶۰۰ میلیون نسخه شمارگان جهانی عبور کرد.
+        </div>
+        <div class="dastan">
+            <h2>جهان داستان</h2>
+جهان وان پیس از دریاها، جزایر و قلمروهای گوناگونی تشکیل شده است. یکی از مهم‌ترین مناطق آن گرند لاین است؛ مسیری دریایی که بسیاری از دزدان دریایی برای یافتن گنج وان پیس در آن سفر می‌کنند.
+
+در این جهان، گروه‌های مختلفی مانند دزدان دریایی، نیروی دریایی، دولت جهانی و سازمان‌های مستقل حضور دارند. رقابت و تعارض میان این نیروها بخش مهمی از پیشبرد داستان را شکل می‌دهد.
+
+<h2>میوه‌های شیطانی</h2>
+میوه‌های شیطانی از عناصر مهم جهان داستان هستند. این میوه‌ها پس از مصرف، توانایی‌های غیرمعمولی به افراد می‌دهند؛ اما مصرف‌کنندگان آن‌ها توانایی شنا کردن را از دست می‌دهند.
+
+این میوه‌ها در سه گروه اصلی دسته‌بندی می‌شوند:
+
+پارامیشیا: به مصرف‌کننده توانایی‌های ویژه‌ای در زمینه‌های مختلف می‌دهد.
+زوان: امکان تبدیل شدن به حیوانات یا موجودات دیگر را فراهم می‌کند.
+لوگیا: به مصرف‌کننده امکان تبدیل بدن به یک عنصر طبیعی و کنترل آن را می‌دهد.
+این توانایی‌ها در کنار مهارت‌های فردی و قدرت اراده، نقش مهمی در نبردها و رویدادهای داستان دارند.
+        </div>
+        <div class="badane">
+            <div class="card6">
+                <p>انتشار در:</p>
+                <p>هفته‌نامه شونن جامپ</p>
+            </div>
+            <div class="card5">
+                <p>استودیو:</p>
+                <p>توئی انیمیشن</p>
+            </div>
+            <div class="card4">
+                <p>ژانر:</p>
+                <p>ماجراجویی</p>
+            </div>
+            <div class="card3">
+                <p>قسمت ها:</p>
+                <p>1180 قسمت تاالان</p>
+            </div>
+            <div class="card">
+               <p> سال انتشار:</p>
+                <p>22 ژوئیهٔ 1997</p>
+            </div>
+            <div class="card2">
+                <p>نویسنده:</p>
+                <p>ایچیرو اودا</p>
+            </div>
+            <p class="text">ONE PIECE</p>
+            <img src="luffy-pfp-luffy-avatar-engineered-for-anime-impact-and-clarity-nsqc-square_hd-850f_800.webp" class="aks">
+        </div>
+        <div class="sha">
+            <div>
+                <img src="thumb-350-371535.webp" class="lu" 
+                title="مانکی دی. لوفی (به ژاپنی:モンキー・D・ルフィ) که به عنوان لوفی کلاه حصیری نیز شناخته می‌شود، یک شخصیت خیالی از مجموعه مانگا و انیمه وان پیس است که توسط ائیچیرو اودا برای اولین بار در سال ۱۹۹۷ خلق شد.
+
+او کاپیتان دزدان دریایی کلاه حصیری است و رؤیای تبدیل شدن به یک دزد دریایی را از دوران کودکی در سر می‌پروراند.">
+                <img src="thumbbig-1414587.webp" class="zoro"
+                title="رورونوا زورو (ロロノア・ゾロ Roronoa Zoro؟, در برخی از اقتباس‌های انگلیسی به صورت «Roronoa Zolo» نوشته می‌شود), همچنین با نام «شکارچی دزد دریایی» زورو (海賊狩りのゾロ Kaizoku-Gari no Zoro؟) نیز شناخته می‌شود، یک شخصیت داستانی ساخته‌شده توسط مانگاکای ژاپنی ائیچیرو اودا است که در مجموعه مانگا و فرنچایز رسانه‌ای وان پیس ظاهر شده‌است. اولین حضور او در فصل سوم مانگای وان پیس بود که در مجله هفته‌نامه شونن جامپ در سال ۱۹۹۷ منتشر شد.">
+                <img src="thumbbig-1368508.webp" class="nami" 
+                title="نامی (Nami) ملقب به «گربه سارق» (Cat Burglar)، یکی از شخصیت‌های اصلی و کلیدی انیمه و مانای وان پیس اثر ائیچیرو اودا است. او ناوبر و نقشه‌کش دزدان دریایی کلاه حصیری محسوب می‌شود.">
+                <img src="thumbbig-737886.webp" class="usop" 
+                title="وسوپ (ウソップ Usoppu؟), همچنین با نام‌های پدر ایتاچی و «گاد» اوسوپ نیز شناخته می‌شود، یک شخصیت داستانی در فرنچایز وان پیس ساخته‌شده توسط ائیچیرو اودا است. او به عنوان تک‌تیرانداز دزدان دریایی کلاه حصیری خدمت می‌کند. اوسوپ چهارمین عضوی است که به گروه لوفی پیوست.">
+                <img src="thumbbig-812122.webp" class="sanji" 
+                title="وینسموک سانجی (Vinsmoke Sanji) که با لقب «پای سیاه» (Black Leg) شناخته می‌شود، سرآشپز قهار و یکی از ارکان اصلی قدرت در گروه دزدان دریایی کلاه حصیری در انیمه و مانگای «وان پیس» است.">
+                <img src="thumbbig-1345301.webp" class="choper" 
+                title="تونی تونی چوپر (ژاپنی: トニートニー・チョッパー هپبورن: Tonī Tonī Choppā؟) که با لقب «عاشق آب‌نبات پنبه‌ای» (Cotton Candy Lover) نیز شناخته می‌شود، شخصیتی داستانی در مجموعه مانگا و فرنچایز رسانه‌ای وان پیس است که ائیچیرو اودا آن را خلق کرده است. این شخصیت نخستین بار در فصل ۱۳۴ مجموعه ظاهر شد؛ این فصل نخستین بار در ۸ مه ۲۰۰۰ در هفته‌نامه شونن جامپ متعلق به انتشارات شوئیشا در ژاپن منتشر شد. او ششمین عضو دزدان دریایی کلاه‌حصیری و پنجمین نفری است که به این گروه می‌پیوندد و به‌عنوان پزشک گروه فعالیت می‌کند. ">
+                <img src="thumbbig-1409195.webp" class="robin" 
+                title="نیکو روبین (ニコ・ロビン Niko Robin؟) که با لقب «فرزند شیطان» (Devil Child) نیز شناخته می‌شود، یک شخصیت داستانی در فرنچایز وان پیس است که ائیچیرو اودا آن را خلق کرده است. این شخصیت نخستین بار در فصل ۱۱۴ مجموعه ظاهر شد؛ این فصل نخستین بار در ۲۲ نوامبر ۱۹۹۹ در هفته‌نامه شونن جامپ متعلق به انتشارات شوئیشا در ژاپن منتشر شد.
+
+در این مجموعه، روبین در ابتدا به‌عنوان یکی از شخصیت‌های مخالف معرفی می‌شود، اما سرانجام به هفتمین عضو گروه دزدان دریایی کلاه‌حصیری و ششمین نفری که به این گروه می‌پیوندد، تبدیل می‌شود. ">
+                <img src="franky-wallpapers.jpg" class="franki" 
+                title="فرانکی (ژاپنی: フランキー هپبورن: Furankī؟)که با لقب «سایبورگ» فرانکی نیز شناخته می‌شود، شخصیتی داستانی در فرنچایز وان پیس است که ائیچیرو اودا آن را خلق کرده است. این شخصیت نخستین بار در فصل ۳۲۹ مجموعه ظاهر شد؛ این فصل نخستین بار در ۱۷ ژوئیهٔ ۲۰۰۴ در هفته‌نامه شونن جامپ متعلق به انتشارات شوئیشا در ژاپن منتشر شد. او هشتمین عضو خدمه کلاه حصیری و هفتمین نفری است که به این گروه می‌پیوندد و به‌عنوان کشتی‌ساز گروه فعالیت می‌کند.">
+                <img src="thumbbig-860467.webp" class="jinbe" 
+                title="جینبه (Jinbe) ملقب به «شوالیه دریا» (Knight of the Sea)، یکی از محبوب‌ترین و قدرتمندترین شخصیت‌های انیمه و مانای وان‌پیس (One Piece) اثر اییچیرو اودا است.">
+                <img src="thumbbig-1312630.webp" class="brook" 
+                title="بروک (Brook) ملقب به «پادشاه روح» (Soul King) و «هامینگ بروک» (Humming Brook)، یکی از محبوب‌ترین و تراژیک‌ترین اعضای گروه دزدان دریایی کلاه حصیری در انیمه و مانگای وان پیس است.">
+                <h2>شخصیت های انیمه وان پیس!</h2>
+                مانکی دی. لوفی؛ کاپیتان گروه و شخصیت اصلی داستان
+                <br>
+رورونوا زورو؛ شمشیرزن گروه
+<br>
+نامی؛ دریانورد و نقشه‌کش گروه
+<br>
+اوسوپ؛ تیرانداز گروه
+<br>
+سانجی؛ آشپز گروه
+<br>
+تونی تونی چوپر؛ پزشک گروه
+<br>
+نیکو روبین؛ باستان‌شناس گروه
+<br>
+فرانکی؛ کشتی‌ساز گروه
+<br>
+بروک؛ موسیقی‌دان گروه
+<br>
+جینبی؛ سکان‌دار گروه
+<br>
+<br>
+<br>
+<br>
+<h2>بونتی های شخصیت ها!</h2>
+مانکی دی. لوفی:  <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png">3,000,000,000
+<br>
+رورونوا زورو: <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png">1,111,000,000
+<br>
+نامی :<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 366,000,000
+<br>
+اوسوپ:<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 500,000,000
+<br>
+سانجی:<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 1,032,000,000
+<br>
+تونی تونی چوپر:<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 1000 
+<br>
+نیکو روبین:<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 930,000,000
+<br>
+فرانکی:<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 394,000,000
+<br>
+بروک:<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 383,000,000
+<br>
+جینبه:<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Berrysymbol.png"> 110,000,000,000
+            </div>
+        </div>
+        <div class="sha2">
+            <div class="ff">
+                <h3>داستان!</h3>
+                داستان وان پیس در جهانی خیالی جریان دارد که در آن دزدان دریایی برای دستیابی به ثروت، قدرت و شهرت در دریاهای مختلف به ماجراجویی می‌پردازند.
+
+پس از اعدام گول دی. راجر، که با عنوان پادشاه دزدان دریایی شناخته می‌شد، او از وجود گنجی افسانه‌ای به نام «وان پیس» خبر می‌دهد. این سخن موجب آغاز دوره‌ای می‌شود که به عصر بزرگ دزدان دریایی شهرت پیدا می‌کند؛ دوره‌ای که در آن افراد بسیاری برای یافتن این گنج و کسب عنوان پادشاه دزدان دریایی راهی دریاها می‌شوند.
+
+شخصیت اصلی داستان، مانکی دی. لوفی، پسری جوان است که آرزوی تبدیل شدن به پادشاه دزدان دریایی را دارد. او در کودکی با خوردن یک میوهٔ شیطانی توانایی کشیده‌شدن بدنش مانند لاستیک را به دست می‌آورد؛ در مقابل، توانایی شنا کردن را از دست می‌دهد.
+
+لوفی سفر خود را از دریای ایست بلو آغاز می‌کند و در مسیر یافتن گنج وان پیس، افرادی با اهداف و رؤیاهای متفاوت را به گروه خود دعوت می‌کند. این گروه که با نام دزدان دریایی کلاه حصیری شناخته می‌شوند، در مسیر خود با جزایر ناشناخته، گروه‌های رقیب، نیروهای دریایی و ساختار سیاسی جهان داستان روبه‌رو می‌شوند.
+
+روایت مجموعه در قالب حماسه‌ها و آرک‌های داستانی متعددی پیش می‌رود. از بخش‌های شناخته‌شدهٔ آن می‌توان به ایست بلو، آلاباستا، جزیرهٔ آسمانی، واتر سون و انیس لابی، جنگ سران، جزیرهٔ فیش‌من، درسروزا، جزیرهٔ سراسر کیک، کشور وانو، اگ‌هد و الباف اشاره کرد.
+                <h3>میوه‌های شیطانی!</h3>
+            میوه‌های شیطانی از عناصر مهم جهان داستان هستند. این میوه‌ها پس از مصرف، توانایی‌های غیرمعمولی به افراد می‌دهند؛ اما مصرف‌کنندگان آن‌ها توانایی شنا کردن را از دست می‌دهند.
+
+این میوه‌ها در سه گروه اصلی دسته‌بندی می‌شوند:
+
+پارامیشیا: به مصرف‌کننده توانایی‌های ویژه‌ای در زمینه‌های مختلف می‌دهد.
+زوان: امکان تبدیل شدن به حیوانات یا موجودات دیگر را فراهم می‌کند.
+لوگیا: به مصرف‌کننده امکان تبدیل بدن به یک عنصر طبیعی و کنترل آن را می‌دهد.
+این توانایی‌ها در کنار مهارت‌های فردی و قدرت اراده، نقش مهمی در نبردها و رویدادهای داستان دارند.
+                <h3>فیلم‌های سینمایی و برنامه‌های ویژه!</h3>
+                بر اساس مانگا و مجموعهٔ تلویزیونی وان پیس، فیلم‌های سینمایی پویانمایی و برنامه‌های ویژهٔ تلویزیونی متعددی تولید شده‌اند.
+
+از جمله فیلم‌های شناخته‌شدهٔ این مجموعه می‌توان به موارد زیر اشاره کرد:
+
+One Piece: Strong World
+One Piece Film: Z
+One Piece Film: Gold
+One Piece: Stampede
+One Piece Film: Red
+فیلم‌های سینمایی این مجموعه توسط توئی انیمیشن تولید شده‌اند. تا اکتبر ۲۰۲۴، تعداد فیلم‌های بلند سینمایی وان پیس به ۱۵ عنوان رسیده بود.
+                <h3>بازخورد و دستاوردها!</h3>
+                وان پیس از نظر شمارگان جهانی و گستردگی اقتباس‌های رسانه‌ای، یکی از موفق‌ترین آثار صنعت مانگا محسوب می‌شود.
+
+در ۴ مارس ۲۰۲۶، انتشارات شوئیشا اعلام کرد شمارگان جهانی این مجموعه از ۶۰۰ میلیون نسخه عبور کرده است. از این میزان، بیش از ۴۵۰ میلیون نسخه در ژاپن و بیش از ۱۵۰ میلیون نسخه در سایر کشورهای جهان منتشر شده بود.
+در سال ۲۰۱۲، وان پیس جایزهٔ بزرگ انجمن کارتونیست‌های ژاپن را دریافت کرد.
+            </div>
+                <img src="download (1).png" class="dast">
+        </div>
+    </div>
+    <script>
+        const topBtn = document.querySelector('.top');
+
+        window.addEventListener('scroll', () => {
+
+        const scrollTotal = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTotal > 200) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+
+    });
+    </script>
+</body>
+</html>
