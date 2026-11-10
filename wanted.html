@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANTED</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .back{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f3dfb5, #c49a63, #795331);
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            gap: 20px;
+        }
+        .badane{
+            width: 85%;
+            height: 85vh;
+            background: linear-gradient(135deg, #292018, #493323, #211812);
+            border-radius: 20px;
+            position: relative;
+            display: flex;
+            transform: scale(min(calc(100vw / 1300), calc(100vh / 750)));
+            transform-origin: center center;
+            flex-shrink: 0;
+        }
+        .luffy{
+            width: 13%;
+            height: 29vh;
+            margin-top: 3%;
+            margin-left: 7%;
+            border-radius: 10px;
+            position: absolute;
+            transition: 0.8s;
+            cursor: pointer;
+        }
+        .luffy:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .zoro{
+            width: 13%;
+            height: 29vh;
+            margin-top: 3%;
+            margin-left: 21.5%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .zoro:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .nami{
+            width: 13%;
+            height: 29vh;
+            margin-top: 3%;
+            margin-left: 36%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .nami:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .ussop{
+            width: 13%;
+            height: 29vh;
+            margin-top: 3%;
+            margin-left: 50.5%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .ussop:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .sanji{
+            width: 13%;
+            height: 29vh;
+            margin-top: 3%;
+            margin-left: 65%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .sanji:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .chopper{
+            width: 13%;
+            height: 29vh;
+            margin-top: 3%;
+            margin-left: 79.5%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .chopper:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .robin{
+            width: 13%;
+            height: 29vh;
+            top: 60%;
+            margin-left: 7%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .robin:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .franky{
+            width: 13%;
+            height: 29vh;
+            top: 60%;
+            margin-left: 21.5%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .franky:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .brook{
+            width: 13%;
+            height: 29vh;
+            top: 60%;
+            margin-left: 36%;
+            border-radius: 10px;
+           position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .brook:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .jimbei{
+            width: 13%;
+            height: 29vh;
+            top: 60%;
+            margin-left: 50.5%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .jimbei:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .ace{
+            width: 13%;
+            height: 29vh;
+            top: 60%;
+            margin-left: 65%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .ace:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .shanks{
+            width: 13%;
+            height: 29vh;
+            top: 60%;
+            margin-left: 79.5%;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .shanks:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        @media screen and (max-width: 768px) {
+
+        .back {
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+            padding: 20px 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .badane {
+            width: 95%;
+            height: auto;
+            min-height: 0;
+            transform: none;
+            display: flex;
+            padding: 20px 0;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .luffy, .zoro, .nami, .ussop, .sanji, .chopper,
+        .robin, .franky, .brook, .jimbei, .ace, .shanks {
+            width: 70%;
+            height: 45vh;
+            margin: 0;
+            left: 12.5%;
+            position: absolute;
+        }
+
+        .luffy  { top: 20px; }
+        .zoro   { top: calc(35vh + 140px); }
+        .nami   { top: calc(70vh + 260px); }
+        .ussop  { top: calc(105vh + 380px); }
+        .sanji  { top: calc(140vh + 500px); }
+        .chopper{ top: calc(175vh + 620px); }
+        .robin  { top: calc(210vh + 740px); }
+        .franky { top: calc(245vh + 860px); }
+        .brook  { top: calc(280vh + 980px); }
+        .jimbei { top: calc(315vh + 1100px); }
+        .ace    { top: calc(350vh + 1220px); }
+        .shanks { top: calc(385vh + 1340px); }
+
+        .badane {
+            min-height: calc(410vh + 1500px);
+        }
+        .luffy:hover, .zoro:hover, .nami:hover, .ussop:hover,
+        .sanji:hover, .chopper:hover, .robin:hover, .franky:hover,
+        .brook:hover, .jimbei:hover, .ace:hover, .shanks:hover {
+            transform: scale(1.15);
+        }
+        .matn2{
+            font-size: 20px;
+        }
+        }
+        .matn2{
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+            <div class="matn">
+                <p class="matn2">ONE PICEC WANTED💀!</p>
+            </div>
+        <div class="badane">
+            <div class="lu">
+                <img src="5856d713cfa3ab4a51ea872b6c74912f.jpg" class="luffy">
+            </div>
+            <div class="ztext">
+                <img src="a8560fb2df083c65d66e90d94e533a27.jpg" class="zoro">
+            </div>
+            <div class="ntext">
+                <img src="aa176c8d2e1809dcb08044e98bc318b3.jpg" class="nami">
+            </div>
+            <div class="utext">
+                <img src="65fc5c5a5ea7b120c473ca5f365a0955.jpg" class="ussop">
+            </div>
+            <div class="stext">
+                <img src="6e6b29ce394647239b93cf79e83583a6.jpg" class="sanji">
+            </div>
+            <div class="ctext">
+                <img src="49218d1d169c358d86057a9fc1d9fb76.jpg" class="chopper">
+            </div>
+            <div class="rtext">
+                <img src="f89c4bbf5d935cf06359699e636e86b2.jpg" class="robin">
+            </div>
+            <div class="ftext">
+                <img src="12ff469f1556e91aed2c28886c6b6b4c.jpg" class="franky">
+            </div>
+            <div class="btext">
+                <img src="3daff4e176186f9fbd0de6979c58e58a.jpg" class="brook">
+            </div>
+            <div class="jtext">
+                <img src="f13dc9d0e2195ba918203177600b52e0.jpg" class="jimbei">
+            </div>
+            <div class="atext">
+                <img src="936ab8d36c34eae312f331c8b8cfe651.jpg" class="ace">
+            </div>
+            <div class="shtext">
+                <img src="fe5edd389b49a6a5b5237ebb79643527.jpg" class="shanks">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
