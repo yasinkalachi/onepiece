@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARKS</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .back{
+            background: linear-gradient(125deg,#071A16 0%,#103B30 35%,#1C6650 68%,#102A25 100%);
+            width: 100%;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            position: relative;
+            flex-direction: column;
+        }
+        .badane{
+            background: linear-gradient(135deg,#123D32 0%,#205B43 40%,#34734F 72%,#193F36 100%);
+            width: 85%;
+            height: auto;
+            min-height: 95vh;
+            margin-top: 2%;
+            border-radius: 30px;
+            display: block;
+            position: relative;
+            padding: 15px;
+        }
+        .park{
+            width: 30%;
+            height: 93vh;
+            border-radius: 20px;
+            margin-top: 0.5%;
+            margin-left: 0.5%;
+            flex-shrink: 0;
+            object-fit: cover;
+            float: left;
+            margin: 0 15px 10px 0;
+        }
+        .tpark{     
+            direction: rtl;
+            flex: 1;
+            min-width:  0;
+            height: auto;
+            text-align: right;
+            color: white;
+            margin-top: 0.2%;
+            margin-right: 1%;
+            font-size: 17.5px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+            align-self: stretch;
+            font-size: 19px;
+        }
+        .all{
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: linear-gradient(90deg, #B7F7D8, #42D6A4, #D4F56A, #FFFFFF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+        }
+        .vc{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            width: 85%;
+            margin: auto;
+        }
+        .carks{
+            background: linear-gradient(135deg,#092E2B 0%,#087F68 30%,#20A879 58%,#A3C95B 82%,#D4E89A 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks2{
+            background: linear-gradient(135deg,#0B2822 5%,#155441 40%,#39805A 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks3{
+            background: linear-gradient(135deg,#092A30 5%,#11605F 40%,#269487 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks4{
+            background: linear-gradient(135deg,#092A30 5%,#11605F 40%,#269487 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks5{
+            background: linear-gradient(135deg,#102C27 5%,#176B55 40%,#54A77A 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks6{
+            background: linear-gradient(135deg,#10251E 5%,#31513A 40%,#78965A 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks7{
+            background: linear-gradient(135deg,#092321 5%,#14504A 40%,#397F72 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks8{
+            background: linear-gradient(135deg,#0B211B 5%,#286044 40%,#86A65B 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks9{
+            background: linear-gradient(135deg,#102A25 5%,#236B5A 30%,#8ABF9A 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks10{
+            background: linear-gradient(135deg,#14251B 5%,#42633B 40%,#A1B86B 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks11{
+            background: linear-gradient(135deg,#071F1C 5%,#0E5147 40%,#45A18B 100%);
+            width: 90%;
+            height: 68vh;
+            border-radius: 25px;
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            transition: 1s;
+        }
+        .carks10:nth-last-child(2){
+            grid-column: 2 / 4;
+        }
+
+        .carks11:last-child{
+            grid-column: 4 / 6;
+        }
+        .EastBlue{
+            width: 100%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .tcarks{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 50px;
+            background: linear-gradient(135deg,#092E2B 0%,#087F68 30%,#20A879 58%,#A3C95B 82%,#D4E89A 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .carks:hover{
+            transform: scale(1.3);
+        }
+        .AlabastaSaga{
+            width: 100%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .tcarks2{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#0B2822 20%,#155441 80%,#39805A 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .carks2:hover{
+            transform: scale(1.3);
+        }
+        .SkyIsland{
+            width: 100%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .tcarks3{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#092A30 20%,#11605F 80%,#269487 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .carks3:hover{
+            transform: scale(1.3);
+        }
+        .Water7{
+            width: 100%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .tcarks4{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#092A30 20%,#11605F 80%,#269487 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .carks4:hover{
+            transform: scale(1.3);
+        }
+        .ThrillerBark{
+            width: 90%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .tcarks5{
+            font-size: 25px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#102C27 20%,#176B55 80%,#54A77A 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+        }
+        .carks5:hover{
+            transform: scale(1.3);
+        }
+        .SummitWar{
+            width: 90%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .tcarks6{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#10251E 20%,#31513A 80%,#78965A 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+            
+        }
+        .carks6:hover{
+            transform: scale(1.3);
+        }
+        .Fish-ManIsland{
+            width: 90%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .tcarks7{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#092321 20%,#14504A 80%,#397F72 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+        }
+        .carks7:hover{
+            transform: scale(1.3);
+        }
+        .Dressrosa{
+            width: 90%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .tcarks8{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#0B211B 20%,#286044 80%,#86A65B 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+        }
+        .carks8:hover{
+            transform: scale(1.3);
+        }
+        .WholeCakeIsland{
+            width: 90%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .tcarks9{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#102A25 20%,#236B5A 80%,#8ABF9A 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+        }
+        .carks9:hover{
+            transform: scale(1.3);
+        }
+        .WanoCountry{
+            width: 90%;
+            height: 50vh;
+            border-radius: 15px !important;
+            margin: auto;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .tcarks10{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#14251B 20%,#42633B 80%,#A1B86B 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+        }
+        .carks10:hover{
+            transform: scale(1.3);
+        }
+        .Final{
+            width: 90%;
+            height: 50vh;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+            margin-left: 17px;
+        }
+        .tcarks11{
+            font-size: 30px;
+            text-align: center;
+            padding: 25px;
+            font-weight: bold;
+            padding-bottom: 55px;
+            background: linear-gradient(135deg,#071F1C 20%,#0E5147 80%,#45A18B 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent
+        }
+        .carks11:hover{
+            transform: scale(1.3);
+        }
+        .vc a {
+            text-decoration: none;
+        }
+        .developer{
+            width: 55%;
+            height: 35vh;
+            background: linear-gradient(135deg,#092E2B 0%,#087F68 30%,#20A879 58%,#A3C95B 82%,#D4E89A 100%);
+            border-radius: 20px;
+            position: relative;
+        }
+        .SPECIALINFORMATION{
+            text-align: right;
+            margin-right: 1.5%;
+            margin-top: 2.5%;
+            color: #00ffaa;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        hr{
+            border: none;
+            height: 1px;
+            background-color: #386B8C;
+            margin: 0 auto;
+            margin-top: 2.5%;
+            width: 95%;
+        }
+        .YASIN{
+            margin-left: 3%;
+            margin-top: 3%;
+        }
+        .ya{
+            color: #EAF6FF;
+            font-size: 25px;
+        }
+        .fra{
+            color: #A9D6E5;
+            opacity: 0.8;
+            font-size: 18px;
+            margin-top: 0.5%;
+        }
+        .cre{
+            color: #C4DCEB;
+            font-size: 20px;
+            margin-top: 0.5%;
+        }
+        .hr2{
+            border: none;
+            height: 1px;
+            background-color: #386B8C;
+            margin: 0 auto;
+            margin-top: 2.5%;
+            width: 97%;
+            margin-right: 5%;
+        }
+        .tel{
+            width: 6.5%;
+            height: 6.5%;
+            margin-top: 2%;
+            border: none;
+            margin-left: 35%;
+            transition: 0.4s;
+        }
+        .github{
+            width: 6.5%;
+            height: 6.5%;
+            margin-top: -2.3%;
+            border: none;
+            margin-left: 45%;
+            transition: 0.4s;
+        }
+        .insta{
+            width: 6.5%;
+            height: 6.5%;
+            margin-top: -2.3%;
+            border: none;
+            margin-left: 55%;
+            transition: 0.4s;
+        }
+        .tel:hover, .github:hover, .insta:hover{
+            transform: scale(1.3);
+        }
+        @media (max-width: 600px) {
+        .back {
+            padding: 12px;
+            gap: 25px;
+        }
+        .badane {
+            width: 100%;
+            min-height: auto;
+            height: auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .park {
+            width: 100%;
+            height: 260px;
+            float: none;
+            margin: 0 0 20px 0;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .tpark {
+            width: 100%;
+            margin: 0;
+            font-size: 20px;
+            line-height: 1.9;
+            text-align: right;
+            direction: rtl;
+            overflow-wrap: anywhere;
+        }
+        .all {
+            font-size: 27px;
+            text-align: center;
+        }
+        .vc {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: auto;
+        }
+        .carks, .carks2, .carks3, .carks4,
+        .carks5, .carks6, .carks7, .carks8,
+        .carks9, .carks10, .carks11 {
+            width: 90%;
+            height: 430px;
+            min-height: 430px;
+            grid-column: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            margin: auto;
+            border-radius: 20px;
+        }
+        .carks10:nth-last-child(2),
+        .carks11:last-child {
+            grid-column: auto;
+        }
+        .vc a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+        .vc img {
+            width: 90%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+        .tcarks, .tcarks2, .tcarks3, .tcarks4,
+        .tcarks5, .tcarks6, .tcarks7, .tcarks8,
+        .tcarks9, .tcarks10, .tcarks11 {
+            width: 100%;
+            font-size: 23px;
+            padding: 25px 5px 10px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .developer {
+            width: 100%;
+            height: auto;
+            min-height: 280px;
+            padding: 20px 15px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        .SPECIALINFORMATION,
+        .YASIN,
+        .ya,
+        .fra,
+        .cre {
+            position: static;
+            width: 100%;
+            margin: 10px auto;
+            text-align: center;
+        }
+        .hr2 {
+            width: 100%;
+            margin: 15px auto;
+        }   
+        .tel, .github, .insta {
+            display: inline-block;
+            position: static;
+            width: 40px;
+            height: 40px;
+            margin: 12px;
+            vertical-align: middle;
+        }
+        .tel img, .github img, .insta img,
+        .tel svg, .github svg, .insta svg {
+            width: 100%;
+            height: 100%;
+        }
+        .carks:hover,
+        .carks2:hover,
+        .carks3:hover,
+        .carks4:hover,
+        .carks5:hover,
+        .carks6:hover,
+        .carks7:hover,
+        .carks8:hover,
+        .carks9:hover,
+        .carks10:hover,
+        .carks11:hover {
+            transform: none !important;
+        }
+        }
+        .top{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg,#092E2B 0%,#087F68 30%,#20A879 58%,#A3C95B 82%,#D4E89A 100%);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            z-index: 999;
+            transition: all 0.4s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .top:hover{
+            transform: translateY(-5px);
+            box-sizing: 0 6px 20px rgb(35, 85, 180);
+        }
+        .top.show{
+            opacity: 1;
+            pointer-events: auto;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="#" class="top" title="برگشت به بالا">⬆</a>
+        <div class="badane">
+            <img src="b0ef5912202e3b9192782116db256ef1.jpg" alt="akark" class="park">
+            <div class="tpark">
+                <h2>آرک‌های وان پیس (ONE PIECE ARCS)</h2>
+                <h3>سفری در دنیای بزرگ وان پیس</h3>
+                <h3>آرک چیست؟</h3>
+                <p>وان پیس یک داستان ماجراجویی عظیم است که توسط ایچیرو اودا خلق شده و دنیایی گسترده از جزایر ناشناخته، دزدان دریایی قدرتمند، تمدن‌های باستانی، رازهای تاریخی و ماجراجویی‌های فراموش‌نشدنی را به تصویر می‌کشد.
+
+داستان وان پیس برخلاف بسیاری از آثار دیگر، به شکل یک روایت پیوسته و طولانی پیش می‌رود؛ اما برای سازمان‌دهی بهتر اتفاقات، به بخش‌های داستانی کوچک‌تری تقسیم شده است که به آن‌ها «آرک» (Arc) گفته می‌شود.
+
+هر آرک معمولاً روی یک جزیره، منطقه، گروه از شخصیت‌ها یا یک درگیری مشخص تمرکز دارد. در طول هر آرک، شخصیت‌های جدید معرفی می‌شوند، دشمنان تازه‌ای وارد داستان می‌شوند و اتفاقاتی رخ می‌دهند که می‌توانند تأثیر زیادی بر ادامه ماجراجویی داشته باشند.
+
+برای مثال، در آرک آرلانگ پارک شاهد یکی از مهم‌ترین اتفاقات زندگی نامی هستیم، در حالی که آرک انیس لابی به یکی از سرنوشت‌سازترین نبردهای گروه کلاه‌حصیری تبدیل می‌شود.
+
+آرک‌ها باعث می‌شوند داستان وان پیس به شکل مرحله‌به‌مرحله گسترش پیدا کند و هر بخش، اطلاعات و جزئیات تازه‌ای از دنیای آن را آشکار سازد.</p>
+                <h3>ساگا چیست و چه تفاوتی با آرک دارد؟</h3>
+                <p>در وان پیس، چند آرک مرتبط با یکدیگر در قالب یک داستان بزرگ‌تر قرار می‌گیرند که به آن «ساگا» (Saga) گفته می‌شود.
+
+ساگا در واقع مجموعه‌ای از چند آرک است که معمولاً یک خط داستانی مشترک، هدف مشخص یا درگیری بزرگ را دنبال می‌کنند.
+
+برای مثال، ساگای واتر سون شامل آرک‌هایی مانند واتر سون، انیس لابی و پست انیس لابی است. این آرک‌ها هرکدام داستان و اتفاقات مخصوص خود را دارند، اما در کنار یکدیگر یک روایت بزرگ‌تر را تشکیل می‌دهند.
+
+به زبان ساده:
+
+آرک (Arc): یک بخش مشخص از داستان که معمولاً روی یک مکان، اتفاق یا درگیری تمرکز دارد.
+
+ساگا (Saga): مجموعه‌ای از آرک‌های مرتبط که یک داستان بزرگ‌تر را شکل می‌دهند.</p>
+                <h3>ساختار داستان وان پیس</h3>
+                <p>داستان وان پیس به یازده ساگای اصلی تقسیم می‌شود که هرکدام مرحله متفاوتی از سفر مانکی دی. لوفی و گروه دزدان دریایی کلاه‌حصیری را روایت می‌کنند.
+
+این سفر از دریای ایست بلو آغاز می‌شود؛ جایی که لوفی برای رسیدن به رؤیای خود، یعنی تبدیل شدن به پادشاه دزدان دریایی، اعضای اولیه گروهش را جمع‌آوری می‌کند.
+
+با ورود به گرند لاین، ماجراجویی‌ها گسترده‌تر و خطرناک‌تر می‌شوند. گروه کلاه‌حصیری با دشمنان قدرتمند، سازمان‌های بزرگ، حکومت جهانی و رازهایی روبه‌رو می‌شود که به تاریخ پنهان جهان وان پیس ارتباط دارند.
+<br>
+یازده ساگای اصلی عبارت‌اند از:
+<br>
+۱. ساگای ایست بلو (East Blue Saga)
+<br>
+۲. ساگای آلاباستا (Alabasta Saga)
+<br>
+۳. ساگای جزیره آسمانی (Sky Island Saga)
+<br>
+۴. ساگای واتر سون (Water 7 Saga)
+<br>
+۵. ساگای تریلر بارک (Thriller Bark Saga)
+<br>
+۶. ساگای جنگ بزرگ (Summit War Saga)
+<br>
+۷. ساگای جزیره فیش‌من (Fish-Man Island Saga)
+<br>
+۸. ساگای درسروزا (Dressrosa Saga)
+<br>
+۹. ساگای هول کیک آیلند (Whole Cake Island Saga)
+<br>
+۱۰. ساگای کشور وانو (Wano Country Saga)
+<br>
+۱۱. ساگای پایانی (Final Saga)</p>
+                <h3>چرا آرک‌ها اهمیت دارند؟</h3>
+                <p>یکی از ویژگی‌های مهم وان پیس، ارتباط عمیق میان اتفاقات مختلف داستان است.
+
+بسیاری از شخصیت‌ها، مکان‌ها و رازهایی که در آرک‌های ابتدایی معرفی می‌شوند، ممکن است صدها قسمت بعد دوباره اهمیت پیدا کنند. گاهی یک اتفاق کوچک در گذشته، زمینه‌ساز یکی از بزرگ‌ترین اتفاقات آینده می‌شود.
+
+آرک‌ها همچنین فرصت مناسبی برای شناخت بهتر شخصیت‌ها هستند. در هر بخش ممکن است گذشته یک شخصیت آشکار شود، روابط میان اعضای گروه تغییر کند یا دیدگاه تازه‌ای نسبت به دنیای داستان به وجود بیاید.
+
+از طرف دیگر، هر آرک بخش متفاوتی از جهان وان پیس را به نمایش می‌گذارد؛ از پادشاهی‌های مختلف و جزایر عجیب گرفته تا سازمان‌های نظامی، گروه‌های دزدان دریایی و تمدن‌های ناشناخته.
+
+به همین دلیل، آرک‌ها صرفاً مجموعه‌ای از مبارزات و اتفاقات جداگانه نیستند، بلکه قطعاتی از یک داستان بسیار بزرگ و به‌هم‌پیوسته محسوب می‌شوند.</p>
+                <h3>سفری که هنوز ادامه دارد</h3>
+                <p>از نخستین قدم‌های لوفی در ایست بلو تا ماجراجویی‌های پیچیده و رازآلود ساگای پایانی، هر آرک بخشی از مسیر طولانی گروه کلاه‌حصیری را روایت می‌کند.
+
+در این مسیر، دوستان جدیدی پیدا می‌شوند، دشمنان قدرتمندی شکست می‌خورند، رازهای قدیمی آشکار می‌شوند و دنیای وان پیس قدم‌به‌قدم شکل واقعی‌تری به خود می‌گیرد.
+
+هر جزیره داستانی دارد، هر ماجراجویی رازی را پنهان کرده و هر اتفاق می‌تواند بخشی از حقیقت بزرگ‌تری باشد.</p>
+            </div>
+        </div>
+        <div class="all">
+            All One Piece Arcs
+        </div>
+        <div class="vc">
+            <div class="carks">
+                <a href="EastBlue.html">
+                    <img src="a6a5c66a84aef739c02de5592f861077.jpg" alt="East Blue Saga" class="EastBlue">
+                    <p class="tcarks">1:East Blue Saga</p>
+                </a>
+            </div>
+            <div class="carks2">
+                <a href="Alabasta.html">
+                    <img src="cc5dcef8d769e90571cb8b5b61b8fcba.jpg" alt="Alabasta Saga" class="AlabastaSaga">
+                    <p class="tcarks2">2:Alabasta Saga</p>
+                </a>
+            </div>
+            <div class="carks3">
+                <a href="SkyIsland.html">
+                    <img src="a4045f5612b9af22b78156c32c729bcf.jpg" alt="Sky Island Saga" class="SkyIsland">
+                    <p class="tcarks3">3:Sky Island Saga</p>
+                </a>
+            </div>
+            <div class="carks4">
+                <a href="Water7.html">
+                    <img src="ac53f8e434da21b5b83a73a23518f1a1.jpg" alt="Water 7 Saga" class="Water7">
+                    <p class="tcarks4">4:Water 7 Saga</p>
+                </a>
+            </div>
+            <div class="carks5">
+                <a href="ThrillerBark.html">
+                    <img src="4d1562a225be5534d521ee709b1ad36e.jpg" alt="Thriller Bark Saga" class="ThrillerBark">
+                    <p class="tcarks5">5:Thriller Bark Saga</p>
+                </a>
+            </div>
+            <div class="carks6">
+                <a href="SummitWar.html">
+                    <img src="46682853ad77fc00764c1f206c3dc996.jpg" alt="Summit War Saga" class="SummitWar">
+                    <p class="tcarks6">6:Summit War Saga</p>
+                </a>
+            </div>
+            <div class="carks7">
+                <a href="Fish-ManIsland.html">
+                    <img src="f7321e6dcbc836efe52c3f3d9a0ba9a2.jpg" alt="Fish-Man Island Saga" class="Fish-ManIsland">
+                    <p class="tcarks7">7:Fish-Man Island Saga</p>
+                </a>
+            </div>
+            <div class="carks8">
+                <a href="Dressrosa.html">
+                    <img src="c5b3bd6b96b35bbc795dcae7a84edbf9.jpg" alt="Dressrosa Saga" class="Dressrosa">
+                    <p class="tcarks8">8:Dressrosa Saga</p>
+                </a>
+            </div>
+            <div class="carks9">
+                <a href="WholeCakeIsland.html">
+                    <img src="5932f6f30d416ef4eec742d9fb6a072d.jpg" alt="Whole Cake Island" class="WholeCakeIsland">
+                    <p class="tcarks9">9:Whole Cake Island Saga</p>
+                </a>
+            </div>
+            <div class="carks10">
+                <a href="WanoCountry.html">
+                    <img src="c9891e6e318ad79c5756394591fb04e9.jpg" alt="Wano Country Saga" class="WanoCountry">
+                    <p class="tcarks10">10:Wano Country Saga</p>
+                </a>
+            </div>
+            <div class="carks11">
+                <a href="Final">
+                    <img src="e9fb4f41267c0cf6121c3ccb80bad75d.jpg" alt="Final Saga" class="Final">
+                    <p class="tcarks11">11:Final Saga</p>
+                </a>
+            </div>
+        </div>
+        <div class="developer">
+            <div class="SPECIALINFORMATION">
+                SPECIAL INFORMATION
+                <hr>
+            </div>
+            <div class="YASIN">
+                <p class="ya">YASIN</p>
+                <p class="fra">Front-End Developer</p>
+                <p class="cre">Creator of this website</p>
+                <hr class="hr2">
+            </div>
+            <div class="tel">
+                <a href="https://t.me/YA3IN_IU">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Telegram</title>
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                </a>
+            </div>
+            <div class="github">
+                <a href="https://github.com/yasinkalachi">
+                    <title>GITHUB</title>
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+            </div>
+            <div class="insta">
+                <a href="https://www.instagram.com/yasinkashani12?psln=MWR2NTNzNmw2bmtxag==">
+                    <title>instagram</title>
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+            const topBtn = document.querySelector('.top');
+
+        window.addEventListener('scroll', () => {
+
+        const scrollTotal = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTotal > 500) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+
+    });
+    </script>
+</body>
+</html>
