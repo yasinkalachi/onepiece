@@ -165,150 +165,144 @@
             color: rgb(240, 235, 255);
         }
         @media (max-width: 600px) {
-    .back {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        gap: 15px;
-        height: auto;
-    }
-    .badane, .tozi, .dastan, .sha {
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        margin: 0 !important;
-        transform: none !important;
-    }
-    .badane {
-        order: 1;
-        padding: 20px 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        min-height: auto;
-    }
-
-.tozi {
-        order: 2;
-        padding: 15px;
-        font-size: 14px;
-        line-height: 1.6;
-        box-sizing: border-box;
-    }
-
-    .dastan {
-        order: 3;
-        padding: 15px;
-        font-size: 16px;
-        line-height: 1.8;
-        max-height: none;
-        overflow-y: visible;
-    }
-
-    .sha {
-        order: 4;
-        padding: 15px;
-        font-size: 16px;
-        display: block !important;
-        overflow-y: visible;
-        position: static !important;
-    }
-    .aks {
-        position: static;
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-        order: 1;
-    }
-
-    .text {
-        position: static;
-        font-size: 35px;
-        width: auto;
-        height: auto;
-        text-align: center;
-        order: 2;
-        margin-bottom: 5px;
-    }
-
-    .card, .card2, .card3, .card4, .card5, .card6 {
-        position: static;
-        width: 100%;
-        height: auto;
-        min-height: 60px;
-        font-size: 18px;
-        padding: 10px;
-        order: 3;
-    }
-    .lu, .zoro, .nami, .usop, .sanji, .choper, .robin, .franki, .jinbe, .brook {
-        position: static !important;
-        display: inline-block !important;
-        width: 90px !important;
-        height: 90px !important;
-        margin: 4px !important;
-        bottom: auto !important;
-        left: auto !important;
-    }
-    .ticker{
-        width: 100%;
-        padding: 8px 0;
-        margin-bottom: 5px;
-        border-radius: 8px;
-        order: 0;
-    }
-    .ttext {
-        animation: moveTextMobile 12s linear infinite !important;
-    }
-    @keyframes moveTextMobile {
-        0% {
-            transform: translateX(-100%);
+        .back {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            gap: 15px;
+            height: auto;
         }
-        100% {
-            transform: translateX(100%);
+        .badane, .tozi, .dastan, .sha {
+            position: static !important;
+            width: 100% !important;
+            height: auto !important;
+            margin: 0 !important;
+            transform: none !important;
         }
-    }
+        .badane {
+            order: 1;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            min-height: auto;
+        }
+        .tozi {
+            order: 2;
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+            box-sizing: border-box;
+        }
+        .dastan {
+            order: 3;
+            padding: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+            max-height: none;
+            overflow-y: visible;
+        }
+        .sha {
+            order: 4;
+            padding: 15px;
+            font-size: 16px;
+            display: block !important;
+            overflow-y: visible;
+            position: static !important;
+        }
+        .aks {
+            position: static;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            order: 1;
+        }
+        .text {
+            position: static;
+            font-size: 35px;
+            width: auto;
+            height: auto;
+            text-align: center;
+            order: 2;
+            margin-bottom: 5px;
+        }
+        .card, .card2, .card3, .card4, .card5, .card6 {
+            position: static;
+            width: 100%;
+            height: auto;
+            min-height: 60px;
+            font-size: 18px;
+            padding: 10px;
+            order: 3;
+        }
+        .lu, .zoro, .nami, .usop, .sanji, .choper, .robin, .franki, .jinbe, .brook {
+            position: static !important;
+            display: inline-block !important;
+            width: 90px !important;
+            height: 90px !important;
+            margin: 4px !important;
+            bottom: auto !important;
+            left: auto !important;
+        }
+        .ticker{
+            width: 100%;
+            padding: 8px 0;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            order: 0;
+        }
+        .ttext {
+            animation: moveTextMobile 12s linear infinite !important;
+        }
+        @keyframes moveTextMobile {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+        }
+        }
         .sha2 {
-        order: 10 !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-        position: static !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 20px !important;
-        padding: 20px 15px !important;
-        box-sizing: border-box !important;
-    }
-    .sha2 .dast {
-        order: 1 !important;
-        float: none !important;
-        width: 100% !important;
-        max-width: 300px !important;
-        height: auto !important;
-        object-fit: cover !important;
-        border-radius: 20px !important;
-        margin: 0 auto !important;
-        display: block !important;
-    }
-    .sha2 .ff {
-        order: 2 !important;
-        float: none !important;
-        width: 100% !important;
-        font-size: 20px !important;
-        line-height: 1.8 !important;
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    .ah{
-        text-align: center;
-        position: relative;
-        top: -14px;
-    }
-
-    }
+            order: 10 !important;
+            width: 100% !important;
+            height: auto !important;
+            min-height: auto !important;
+            position: static !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 20px !important;
+            padding: 20px 15px !important;
+            box-sizing: border-box !important;
+        }
+        .sha2 .dast {
+            order: 1 !important;
+            float: none !important;
+            width: 100% !important;
+            max-width: 300px !important;
+            height: auto !important;
+            object-fit: cover !important;
+            border-radius: 20px !important;
+            margin: 0 auto !important;
+            display: block !important;
+        }
+        .sha2 .ff {
+            order: 2 !important;
+            float: none !important;
+            width: 100% !important;
+            font-size: 20px !important;
+            line-height: 1.8 !important;
+            direction: rtl !important;
+            text-align: right !important;
+        }
+        .ah{
+            text-align: center;
+            position: relative;
+            top: -14px;
+        }
+        }
         html {
             min-height: 100%;
             background: rgb(45, 30, 100);
@@ -645,47 +639,42 @@
         .tmarin{
             color: inherit;
         }
-                @media (max-width: 600px) {
+        @media (max-width: 600px) {
 
-    .back {
-        position: relative;
-    }
-
-    .divmarin {
-        position: absolute !important;
-        top: 10px !important;
-        right: calc(50% + 8px) !important;
-        left: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .ttmarin {
-        position: static !important;
-        top: auto !important;
-        left: auto !important;
-    }
-
-    .wanted {
-        position: absolute !important;
-        top: 23.5px !important;
-        left: calc(50% + 8px) !important;
-        right: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .wtext {
-        position: static !important;
-        margin: 0 !important;
-        left: auto !important;
-        top: auto !important;
-    }
-
-    .ticker {
-        margin-top: 40px !important;
-    }
-    }
+        .back {
+            position: relative;
+        }
+        .divmarin {
+            position: absolute !important;
+            top: 10px !important;
+            right: calc(77% + 8px) !important;
+            left: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .ttmarin {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+        }
+        .wanted {
+            position: absolute !important;
+            top: 23.5px !important;
+            left: calc(22% + 8px) !important;
+            right: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .wtext {
+            position: static !important;
+            margin: 0 !important;
+            left: auto !important;
+            top: auto !important;
+        }
+        .ticker {
+            margin-top: 40px !important;
+        }
+        }
         .arks{
             padding: -250px;
             margin: -35px;
@@ -701,6 +690,37 @@
         }
         .tarks{
             color: inherit;
+        }
+        @media (max-width: 600px) {
+        .back {
+            position: relative;
+        }
+        .arks {
+            position: absolute !important;
+            top: 10px !important;
+            left: 52.5% !important;
+            transform: translateX(-50%) !important;
+            right: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: auto !important;
+            height: auto !important;
+            z-index: 1000;
+        }
+        .ttarks {
+            position: static !important;
+            width: auto !important;
+            height: auto !important;
+            left: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            text-align: center;
+        }
+        .tarks {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
         }
     </style>
 </head>
